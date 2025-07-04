@@ -1,0 +1,119 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.app {
+  padding: 25px;
+}
+
+/* Заголовок */
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Основной контейнер */
+.main {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* Строка поиска */
+.search-line {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 0 auto 10px;
+}
+
+.search-input {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  height: 40px;
+  line-height: 20px;
+  padding: 8px 15px;
+  font-size: 16px;
+}
+
+/* Список автодополнения репозиториев */
+.repos-list {
+  max-width: 50%;
+  margin: 0 auto;
+  background: #fff;
+  list-style: none;
+  padding: 0;
+  position: relative;
+  z-index: 10;
+  max-height: 200px;
+  overflow-y: auto;
+
+}
+
+/* подсказки под инпутом */
+.repo-item {
+  border: 1px solid #ccc;
+    border-bottom: none;
+    border-radius: 5px;
+  padding: 8px 15px;
+  cursor: pointer;
+}
+
+.repo-item:last-child {
+  border-bottom: 1px solid #ccc;
+}
+
+.repo-item:hover {
+  background-color: #f0f0f0;
+}
+
+/* список для блоков ниже */
+.repo-block-list {
+    display: flex;
+    flex-direction: column;
+  max-width: 50%;
+  margin: 10px auto;
+  background: #fafafa;
+  border-radius: 5px;
+  font-size: 16px;
+}
+/* выведенный блок при клике на подсказку */
+.repo-block-items {
+        position: relative;
+    border: 1px solid #ccc;
+    border-radius: 13px;
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+/* красный крестик */
+.button-delete{
+    position: absolute;
+    top: 30px;
+    right: 25px;
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
+    border: 4px solid #e62f57;
+    border-radius: 30%;
+}
+
+.button-delete:before,
+.button-delete:after {
+    content: "";
+    position: absolute;
+    top: 21px;
+    left: 10px;
+    width: 26px;
+    height: 4px;
+    background: #e62f57;
+}
+
+.button-delete:before {
+    transform: rotate(45deg);
+}
+
+.button-delete:after {
+    transform: rotate(-45deg);
+}
