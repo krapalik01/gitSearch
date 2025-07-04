@@ -43,6 +43,7 @@ export class View {
       li.append(span);
       span.addEventListener("click", (e) => {
         e.stopPropagation();
+        this.searchInput.value = "";
         this.clearRepos();
         onRepoClick(repo);
       });
